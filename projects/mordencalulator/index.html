@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Calculator by Ram Singh - A fully functional calculator with keyboard support and clean UI.">
+    <meta name="keywords" content="Calculator, JavaScript, Math, Ram Singh, Web App">
+    <meta name="author" content="Ram Singh">
+    
+    <title>Modern Calculator - Ram Singh</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../" class="nav-logo">@ramsingh</a>
+            <div class="nav-links">
+                <a href="../../projects/" class="btn btn-secondary">← Back to Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Calculator App -->
+    <div class="app-container">
+        <div class="app-header">
+            <h1 class="app-title">#modern-calculator</h1>
+            <p class="app-subtitle">A fully functional calculator with keyboard support</p>
+        </div>
+        
+        <div class="calculator-container">
+            <div class="calculator">
+                <div class="display">
+                    <div class="previous-operand" id="previous"></div>
+                    <div class="current-operand" id="current">0</div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-function" onclick="calculator.clear()" data-key="Escape" aria-label="Clear all">AC</button>
+                    <button class="btn btn-function" onclick="calculator.delete()" data-key="Backspace" aria-label="Delete last entry">DEL</button>
+                    <button class="btn btn-function" onclick="calculator.chooseOperation('%')" data-key="%" aria-label="Modulo">%</button>
+                    <button class="btn btn-operator" onclick="calculator.chooseOperation('÷')" data-key="/" aria-label="Divide">÷</button>
+                    
+                    <button class="btn btn-number" onclick="calculator.appendNumber('7')" data-key="7" aria-label="Seven">7</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('8')" data-key="8" aria-label="Eight">8</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('9')" data-key="9" aria-label="Nine">9</button>
+                    <button class="btn btn-operator" onclick="calculator.chooseOperation('×')" data-key="*" aria-label="Multiply">×</button>
+                    
+                    <button class="btn btn-number" onclick="calculator.appendNumber('4')" data-key="4" aria-label="Four">4</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('5')" data-key="5" aria-label="Five">5</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('6')" data-key="6" aria-label="Six">6</button>
+                    <button class="btn btn-operator" onclick="calculator.chooseOperation('-')" data-key="-" aria-label="Subtract">-</button>
+                    
+                    <button class="btn btn-number" onclick="calculator.appendNumber('1')" data-key="1" aria-label="One">1</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('2')" data-key="2" aria-label="Two">2</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('3')" data-key="3" aria-label="Three">3</button>
+                    <button class="btn btn-operator" onclick="calculator.chooseOperation('+')" data-key="+" aria-label="Add">+</button>
+                    
+                    <button class="btn btn-number btn-zero" onclick="calculator.appendNumber('0')" data-key="0" aria-label="Zero">0</button>
+                    <button class="btn btn-number" onclick="calculator.appendNumber('.')" data-key="." aria-label="Decimal point">.</button>
+                    <button class="btn btn-equals" onclick="calculator.calculate()" data-key="Enter" aria-label="Calculate result">=</button>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li>✓ Keyboard support</li>
+                    <li>✓ All basic operations</li>
+                    <li>✓ Modulo operation</li>
+                    <li>✓ Error handling</li>
+                    <li>✓ Responsive design</li>
+                </ul>
+                
+                <div class="keyboard-shortcuts">
+                    <h4>Keyboard Shortcuts</h4>
+                    <div class="shortcut-list">
+                        <div class="shortcut">
+                            <kbd>0-9</kbd>
+                            <span>Numbers</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>+</kbd><kbd>-</kbd><kbd>*</kbd><kbd>/</kbd>
+                            <span>Operations</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Enter</kbd>
+                            <span>Calculate</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Esc</kbd>
+                            <span>Clear</span>
+                        </div>
+                        <div class="shortcut">
+                            <kbd>Backspace</kbd>
+                            <span>Delete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="app-footer">
+            <p>Built with HTML, CSS & JavaScript by <a href="../../">Ram Singh</a></p>
+            <div class="app-links">
+                <a href="https://github.com/Ramsingh4656/Modern-Calculator" target="_blank" rel="noopener">View Source</a>
+                <a href="../../projects/">More Projects</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

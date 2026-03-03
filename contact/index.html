@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Ram Singh - Get in touch for collaborations, internship opportunities, or project discussions.">
+    <meta name="keywords" content="Ram Singh, Contact, Frontend Developer, Collaboration, Internship">
+    <meta name="author" content="Ram Singh">
+    
+    <title>Contact - Ram Singh</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="nav-logo">@ramsingh</a>
+            <ul class="nav-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../about/">About</a></li>
+                <li><a href="../skills/">Skills</a></li>
+                <li><a href="../projects/">Projects</a></li>
+                <li><a href="../experience/">Experience</a></li>
+                <li><a href="../certificates/">Certificates</a></li>
+                <li><a href="./" class="active">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="../">Home</a>
+        <a href="../about/">About</a>
+        <a href="../skills/">Skills</a>
+        <a href="../projects/">Projects</a>
+        <a href="../experience/">Experience</a>
+        <a href="../certificates/">Certificates</a>
+        <a href="./">Contact</a>
+    </div>
+
+    <!-- Contact Header -->
+    <section class="section-padding" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">contacts</h2>
+                <p class="section-subtitle">Open to internships, freelance work, and collaborations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="cards-grid">
+                <!-- Contact Form -->
+                <article class="card glow-border reveal contact-form-card">
+                    <div class="card-header">
+                        <div class="card-icon">📧</div>
+                        <h2 class="card-title">Send me a message</h2>
+                    </div>
+                    <p class="card-description">Have an internship opportunity? Want to collaborate on a project? Or just want to connect? I'd love to hear from you and discuss how I can contribute to your team!</p>
+                    
+                    <!-- Google Forms Integration: Hidden iframe to prevent page redirect -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {handleFormSuccess()}"></iframe>
+                    
+                    <form id="contact-form" 
+                          action="https://docs.google.com/forms/d/e/1FAIpQLSe_s3xZ4xdEq8VCuzdoRP5WJDPh4QQ8qdKD1BZRv9vGLsgazw/formResponse" 
+                          method="POST" 
+                          target="hidden_iframe"
+                          style="margin-top: 2rem;" 
+                          novalidate>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label for="name" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-weight: 500;">Name <span aria-label="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="entry.1399493821"
+                                    required
+                                    aria-describedby="name-error"
+                                    style="width: 100%; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 6px; color: var(--text-primary); font-family: inherit;"
+                                    placeholder="Your name"
+                                >
+                                <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                            <div>
+                                <label for="email" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-weight: 500;">Email <span aria-label="required">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="entry.1771241316"
+                                    required
+                                    aria-describedby="email-error"
+                                    style="width: 100%; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 6px; color: var(--text-primary); font-family: inherit;"
+                                    placeholder="your.email@example.com"
+                                >
+                                <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label for="subject" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-weight: 500;">Subject <span aria-label="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="subject" 
+                                name="entry.1623577951"
+                                required
+                                aria-describedby="subject-error"
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 6px; color: var(--text-primary); font-family: inherit;"
+                                placeholder="What's this about?"
+                            >
+                            <div id="subject-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+                        
+                        <div style="margin-bottom: 2rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary); font-weight: 500;">Message <span aria-label="required">*</span></label>
+                            <textarea 
+                                id="message" 
+                                name="entry.1903909675"
+                                rows="6" 
+                                required
+                                aria-describedby="message-error"
+                                style="width: 100%; padding: 0.75rem; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: 6px; color: var(--text-primary); font-family: inherit; resize: vertical;"
+                                placeholder="Tell me about your project or just say hello!"
+                            ></textarea>
+                            <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" aria-describedby="form-status">
+                            Send Message
+                        </button>
+                        <div id="form-status" class="sr-only" role="status" aria-live="polite"></div>
+                    </form>
+                </article>
+
+                <!-- Contact Info -->
+                <article class="card glow-border reveal">
+                    <div class="card-header">
+                        <div class="card-icon">📍</div>
+                        <h3 class="card-title">Get in Touch</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 600;">Email</h4>
+                            <a href="mailto:ram01singh4656@gmail.com" style="color: var(--text-secondary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                <span>📧</span>
+                                ram01singh4656@gmail.com
+                            </a>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 600;">Location</h4>
+                            <p style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                                <span>📍</span>
+                                India
+                            </p>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 0.5rem; font-weight: 600;">Response Time</h4>
+                            <p style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
+                                <span>⏰</span>
+                                Usually within 24 hours
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 1rem; font-weight: 600;">Social Links</h4>
+                            <div class="social-links" style="justify-content: flex-start;">
+                                <a href="https://github.com/Ramsingh4656" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/ram-singh4656" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="mailto:ram01singh4656@gmail.com" class="social-link" aria-label="Email">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="font-size: 1.5rem; margin-bottom: 2rem; color: var(--accent-primary); font-family: var(--font-mono); text-align: center;">Frequently Asked Questions</h2>
+            
+            <div class="cards-grid">
+                <article class="card glow-border reveal">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">What services do you offer?</h3>
+                    <p style="color: var(--text-secondary);">I specialize in frontend development, including responsive web design, JavaScript applications, and modern UI/UX implementation. I also have experience with cloud computing (Microsoft Azure) and am available for internships and collaborative projects.</p>
+                </article>
+
+                <article class="card glow-border reveal">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">What's your typical response time?</h3>
+                    <p style="color: var(--text-secondary);">I usually respond to emails within 24 hours. For urgent matters, feel free to mention it in your subject line, and I'll prioritize your message.</p>
+                </article>
+
+                <article class="card glow-border reveal">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">What opportunities are you seeking?</h3>
+                    <p style="color: var(--text-secondary);">I'm actively seeking internship opportunities in frontend development, full-stack development, or cloud engineering. I'm also open to freelance projects and collaborative work that can help me grow as a developer.</p>
+                </article>
+
+                <article class="card glow-border reveal">
+                    <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Do you work on collaborative projects?</h3>
+                    <p style="color: var(--text-secondary);">Absolutely! I love collaborating with other developers and designers. Whether it's an open-source project or a team assignment, I'm always excited to contribute.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="card glow-border reveal" style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <h2 style="margin-bottom: 1rem;">Ready to Start a Conversation?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Whether you have an internship opportunity, project idea, or just want to connect, I'm always excited to discuss how I can contribute and learn!</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:ram01singh4656@gmail.com" class="btn btn-primary">Send Email</a>
+                    <a href="https://drive.google.com/file/d/1c1qKTA1PcxHHceqd1WspPueeL9Ro-C4Z/view?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2026 Ram Singh. Built with HTML, CSS & JavaScript</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Ramsingh4656" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/ram-singh4656" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:ram01singh4656@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h.749L12 10.724l9.615-6.903h.749c.904 0 1.636.732 1.636 1.636z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/script.js"></script>
+    <script>
+        // ===== GOOGLE FORMS INTEGRATION =====
+        // Global variable to track form submission state
+        let submitted = false;
+        
+        /**
+         * Handle successful form submission
+         * Called when the hidden iframe loads after form submission
+         */
+        function handleFormSuccess() {
+            if (submitted) {
+                const formStatus = document.getElementById('form-status');
+                const submitBtn = document.querySelector('#contact-form button[type="submit"]');
+                
+                // Show success message
+                formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                formStatus.className = 'success-message';
+                formStatus.style.cssText = `
+                    color: var(--accent-primary);
+                    font-size: 0.875rem;
+                    margin-top: 1rem;
+                    padding: 0.75rem;
+                    background: rgba(139, 92, 246, 0.1);
+                    border: 1px solid rgba(139, 92, 246, 0.3);
+                    border-radius: 6px;
+                    text-align: center;
+                    display: block;
+                `;
+                
+                // Create success notification
+                showSuccessNotification();
+                
+                // Reset form and button state
+                resetFormState();
+                
+                // Reset submitted flag
+                submitted = false;
+            }
+        }
+        
+        /**
+         * Show animated success notification
+         */
+        function showSuccessNotification() {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--bg-card);
+                color: var(--text-primary);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                border: 1px solid var(--accent-primary);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                z-index: 10000;
+                font-size: 0.875rem;
+                max-width: 300px;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+            `;
+            notification.setAttribute('role', 'alert');
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="color: var(--accent-primary); font-size: 1.2rem;">✓</span>
+                    <span>Message sent successfully!</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove notification after 5 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 5000);
+        }
+        
+        /**
+         * Reset form to initial state
+         */
+        function resetFormState() {
+            const contactForm = document.getElementById('contact-form');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const fields = contactForm.querySelectorAll('input:not([type="hidden"]), textarea');
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Reset button
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+            
+            // Clear validation states
+            fields.forEach(field => {
+                field.removeAttribute('aria-invalid');
+                field.style.borderColor = 'var(--border-primary)';
+                const errorElement = document.getElementById(`${field.id}-error`);
+                if (errorElement) {
+                    errorElement.textContent = '';
+                }
+            });
+        }
+
+        // ===== FORM VALIDATION AND SUBMISSION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                /**
+                 * Validate individual form field
+                 */
+                const validateField = (field, errorElement) => {
+                    const value = field.value.trim();
+                    let isValid = true;
+                    let errorMessage = '';
+
+                    if (!value) {
+                        isValid = false;
+                        errorMessage = `${field.labels[0].textContent.replace(' *', '')} is required`;
+                    } else if (field.type === 'email' && !isValidEmail(value)) {
+                        isValid = false;
+                        errorMessage = 'Please enter a valid email address';
+                    }
+
+                    errorElement.textContent = errorMessage;
+                    field.setAttribute('aria-invalid', !isValid);
+                    
+                    if (isValid) {
+                        field.style.borderColor = 'var(--border-primary)';
+                    } else {
+                        field.style.borderColor = '#ef4444';
+                    }
+
+                    return isValid;
+                };
+
+                /**
+                 * Validate email format
+                 */
+                const isValidEmail = (email) => {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                };
+
+                // Add real-time validation to form fields
+                const fields = contactForm.querySelectorAll('input:not([type="hidden"]), textarea');
+                fields.forEach(field => {
+                    const errorElement = document.getElementById(`${field.id}-error`);
+                    
+                    if (errorElement) {
+                        field.addEventListener('blur', () => {
+                            validateField(field, errorElement);
+                        });
+
+                        field.addEventListener('input', () => {
+                            if (field.getAttribute('aria-invalid') === 'true') {
+                                validateField(field, errorElement);
+                            }
+                        });
+                    }
+                });
+
+                /**
+                 * Handle form submission to Google Forms
+                 */
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate all fields before submission
+                    let isFormValid = true;
+                    fields.forEach(field => {
+                        const errorElement = document.getElementById(`${field.id}-error`);
+                        if (errorElement && !validateField(field, errorElement)) {
+                            isFormValid = false;
+                        }
+                    });
+
+                    // Focus first invalid field if validation fails
+                    if (!isFormValid) {
+                        const firstError = contactForm.querySelector('[aria-invalid="true"]');
+                        if (firstError) {
+                            firstError.focus();
+                        }
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const formStatus = document.getElementById('form-status');
+                    
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    submitBtn.setAttribute('aria-busy', 'true');
+                    formStatus.textContent = 'Sending your message...';
+                    formStatus.className = 'sr-only';
+                    
+                    // Set submitted flag for iframe onload detection
+                    submitted = true;
+                    
+                    // Submit form to Google Forms
+                    // The form will submit to the hidden iframe, preventing page redirect
+                    // The handleFormSuccess() function will be called when the iframe loads
+                    this.submit();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
