@@ -554,6 +554,7 @@ textarea:valid {
     border: 3px solid var(--accent-primary);
     box-shadow: var(--shadow-xl), var(--shadow-glow);
     transition: all var(--transition-slow);
+    margin-top: 25px;
 }
 
 .hero-image img:hover {
