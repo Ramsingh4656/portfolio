@@ -42,7 +42,7 @@ This responsive portfolio website built from scratch to showcase my skills and p
 
 ## Live Demo
 
-Visit the live website: [https://ramsingh.me/](https://ramshingh.me/)
+Visit the live website: [https://ramsingh.me/](https://ramsingh.me/)
 
 ## Local Development
 
