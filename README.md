@@ -1,10 +1,12 @@
-# Ram Singh - Portfolio Website
+# Ram Singh — Portfolio Website
 
-A modern, responsive portfolio website showcasing my journey as a BSc-IT student and aspiring frontend developer. Built with clean HTML, CSS, and JavaScript to demonstrate my technical skills and projects to potential employers and collaborators.
+A responsive portfolio website built with HTML, CSS, and JavaScript to showcase my projects, certifications, and skills to potential employers and collaborators.
+
+🌐 **Live site**: [ramsingh.me](https://ramsingh.me/)
 
 ## About Me
 
-I'm Ram Singh, a first-year BSc-IT student passionate about frontend development, cloud computing, and AI/ML fundamentals. This portfolio represents my learning journey and showcases the projects I've built while developing my skills in web development.
+I'm Ram Singh, a first-year BSc-IT student at Chandrabhan Sharma College of Arts, Science and Commerce, Mumbai (2025–2028). I focus on frontend development, cloud computing, and AI/ML fundamentals, and I'm actively seeking internship opportunities.
 
 ## Tech Stack
 
@@ -18,106 +20,53 @@ I'm Ram Singh, a first-year BSc-IT student passionate about frontend development
 
 ## Features
 
-- **Responsive Design**: Optimized for mobile, tablet, and desktop
-- **Dark Theme**: Professional dark theme with violet accents
-- **Interactive Elements**: Smooth animations and hover effects
-- **Contact Form**: Integrated with Google Forms for reliable message delivery
-- **Accessibility**: Screen reader friendly with proper ARIA labels
-- **SEO Optimized**: Structured data and meta tags for better visibility
-- **Performance**: Optimized loading and smooth animations
+- Responsive design for mobile, tablet, and desktop
+- Dark theme with violet accents
+- Smooth animations and hover effects
+- Contact form integrated with Google Forms
+- Accessible with proper ARIA labels and skip links
+- SEO optimised with structured data and meta tags
 
-## Projects Showcase
+## Projects
+
+### AI Multi-Module System
+A modular AI system built with Python and LLM APIs, demonstrating clean architecture and scalable design.
 
 ### Modern Calculator
-A fully functional calculator with keyboard support and error handling. Built with vanilla JavaScript, featuring a clean UI and responsive design.
-
-**Tech**: HTML5, CSS3, JavaScript
-**Features**: Keyboard support, error handling, responsive design
+Responsive calculator with keyboard support and error handling, built with vanilla JS.  
+→ [Live Demo](https://ramsingh.me/projects/mordencalulator/)
 
 ### Portfolio Website
-This responsive portfolio website built from scratch to showcase my skills and projects.
-
-**Tech**: HTML5, CSS3, JavaScript, Google Forms API
-**Features**: Contact form integration, SEO optimization, accessibility compliance
-
-## Live WebSite
-
-Visit the live website: [https://ramsingh.me/](https://ramsingh.me/)
+This site — built from scratch with a focus on accessibility, SEO, and performance.
 
 ## Local Development
 
-To run this project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ramsingh4656/portfolio
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
-
-3. Open `index.html` in your browser or use a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   ```
-
-4. Visit `http://localhost:8000` in your browser
+```bash
+git clone https://github.com/Ramsingh4656/portfolio
+cd portfolio
+python -m http.server 8000
+# Visit http://localhost:8000
+```
 
 ## Project Structure
 
 ```
 ├── index.html              # Main homepage
-├── css/
-│   └── style.css          # Main stylesheet
-├── js/
-│   └── script.js          # Main JavaScript file
-├── assets/
-│   ├── images/            # Images and icons
-│   └── icons/             # Icon assets
-├── projects/              # Projects showcase pages
-├── contact/               # Contact page
-├── experience/            # Experience page
-├── certificates/          # Certificates page
-└── README.md             # Project documentation
+├── css/style.css           # Main stylesheet
+├── js/script.js            # Main JavaScript
+├── assets/images/          # Profile photo and images
+├── projects/               # Projects showcase pages
+├── about/                  # About page
+├── skills/                 # Skills page
+├── experience/             # Experience page
+├── certificates/           # Certificates page
+├── contact/                # Contact page
+└── Ram-Singh-Resume.pdf    # Downloadable resume
 ```
 
 ## Contact
 
-I'm actively seeking internship opportunities and open to collaborations. Feel free to reach out:
-
 - **Email**: ram01singh4656@gmail.com
+- **Phone**: +91 93728 83774
 - **LinkedIn**: [linkedin.com/in/ram-singh4656](https://linkedin.com/in/ram-singh4656)
 - **GitHub**: [github.com/Ramsingh4656](https://github.com/Ramsingh4656)
-
-## Future Improvements
-
-- Add more interactive projects
-- Implement a blog section
-- Add project filtering and search
-- Integrate with a headless CMS
-- Add unit tests for JavaScript functionality
-- Implement Progressive Web App features
-
-## Learning Journey
-
-This portfolio represents my growth as a developer. Each project taught me something new:
-
-- **HTML/CSS**: Semantic markup, responsive design, CSS Grid/Flexbox
-- **JavaScript**: DOM manipulation, event handling, form validation
-- **Accessibility**: WCAG guidelines, screen reader compatibility
-- **Performance**: Image optimization, lazy loading, efficient CSS
-- **SEO**: Meta tags, structured data, semantic HTML
-
-## Acknowledgments
-
-Built with dedication and passion for web development. Special thanks to the open-source community for inspiration and resources that helped me learn and grow as a developer.
-
----
-
-*This portfolio is continuously evolving as I learn new technologies and build more projects. Check back regularly for updates!*
