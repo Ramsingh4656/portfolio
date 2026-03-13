@@ -40,7 +40,7 @@ This responsive portfolio website built from scratch to showcase my skills and p
 **Tech**: HTML5, CSS3, JavaScript, Google Forms API
 **Features**: Contact form integration, SEO optimization, accessibility compliance
 
-## Live Demo
+## Live WebSite
 
 Visit the live website: [https://ramsingh.me/](https://ramsingh.me/)
 
