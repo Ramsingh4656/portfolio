@@ -50,12 +50,12 @@ To run this project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Ramsingh4656/ramsingh4656.github.io.git
+   git clone https://github.com/Ramsingh4656/portfolio
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd ramsingh4656.github.io
+   cd portfolio
    ```
 
 3. Open `index.html` in your browser or use a local server:
