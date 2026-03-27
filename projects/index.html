@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ram Singh's Projects - A collection of web development projects including calculators, portfolio websites, and more.">
-    <meta name="keywords" content="Ram Singh, Projects, Web Development, JavaScript, HTML, CSS, Portfolio">
+    <meta name="description" content="Ram Singh's Projects - Web development projects including AI Multi-Module System, Modern Calculator, and Portfolio Website built with HTML, CSS, JavaScript, and Python.">
+    <meta name="keywords" content="Ram Singh, Projects, Web Development, JavaScript, HTML, CSS, Portfolio, AI, Python">
     <meta name="author" content="Ram Singh">
+    <meta name="robots" content="index, follow">
     
-    <title>Projects - Ram Singh</title>
+    <title>Projects | Ram Singh Portfolio</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ramsingh.me/projects/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projects | Ram Singh Portfolio">
+    <meta property="og:description" content="Ram Singh's web development projects including AI Multi-Module System, Modern Calculator, and Portfolio Website.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ramsingh.me/projects/">
+    <meta property="og:image" content="https://ramsingh.me/assets/images/Profile.jpg">
+    <meta property="og:site_name" content="Ram Singh Portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Ram Singh Portfolio">
+    <meta name="twitter:description" content="Ram Singh's web development projects including AI Multi-Module System, Modern Calculator, and Portfolio Website.">
+    <meta name="twitter:image" content="https://ramsingh.me/assets/images/Profile.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -21,25 +39,30 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="navbar">
         <div class="nav-container">
             <a href="../" class="nav-logo">@ramsingh</a>
-            <ul class="nav-links">
-                <li><a href="../">Home</a></li>
-                <li><a href="../about/">About</a></li>
-                <li><a href="../skills/">Skills</a></li>
-                <li><a href="./" class="active">Projects</a></li>
-                <li><a href="../experience/">Experience</a></li>
-                <li><a href="../certificates/">Certificates</a></li>
-                <li><a href="../contact/">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">☰</button>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../skills/">Skills</a></li>
+                    <li><a href="./" class="active" aria-current="page">Projects</a></li>
+                    <li><a href="../experience/">Experience</a></li>
+                    <li><a href="../certificates/">Certificates</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
         </div>
-    </nav>
+    </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
+    <nav class="mobile-menu" aria-label="Mobile navigation">
         <a href="../">Home</a>
         <a href="../about/">About</a>
         <a href="../skills/">Skills</a>
@@ -50,6 +73,7 @@
     </div>
 
     <!-- Projects Header -->
+    <main id="main-content">
     <section class="section-padding" style="padding-top: 8rem;">
         <div class="container">
             <div class="section-header">
@@ -98,7 +122,7 @@
                         <span class="tech-tag">Responsive</span>
                     </div>
                     <div class="card-actions">
-                        <a href="mordencalulator/" class="btn btn-primary">Live Demo</a>
+                        <a href="modern-calculator/" class="btn btn-primary">Live Demo</a>
                         <a href="https://github.com/Ramsingh4656/Modern-Calculator" class="btn btn-secondary" target="_blank" rel="noopener">Source Code</a>
                     </div>
                 </article>
@@ -286,6 +310,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
