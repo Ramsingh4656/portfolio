@@ -1,7 +1,8 @@
 class Calculator {
     constructor() {
         this.currentOperand = '0';
-        this.previousOperand = '';
+        this.previousOperand = '';  // display string e.g. "12 +"
+        this.previousValue = null;  // numeric value of previous operand
         this.operation = null;
         this.updateDisplay();
     }
@@ -9,6 +10,7 @@ class Calculator {
     clear() {
         this.currentOperand = '0';
         this.previousOperand = '';
+        this.previousValue = null;
         this.operation = null;
         this.updateDisplay();
         this.animateButton('AC');
@@ -37,10 +39,11 @@ class Calculator {
 
     chooseOperation(op) {
         if (this.currentOperand === '') return;
-        if (this.previousOperand !== '' && this.operation != null) {
+        if (this.previousValue !== null && this.operation != null) {
             this.calculate();
         }
         this.operation = op;
+        this.previousValue = parseFloat(this.currentOperand);
         this.previousOperand = this.currentOperand + ' ' + op;
         this.currentOperand = '0';
         this.updateDisplay();
@@ -49,10 +52,10 @@ class Calculator {
 
     calculate() {
         let result;
-        const prev = parseFloat(this.previousOperand);
+        const prev = this.previousValue;
         const current = parseFloat(this.currentOperand);
-        
-        if (isNaN(prev) || isNaN(current)) return;
+
+        if (prev === null || isNaN(prev) || isNaN(current)) return;
 
         switch (this.operation) {
             case '+':
@@ -72,7 +75,8 @@ class Calculator {
                 result = prev / current;
                 break;
             case '%':
-                result = prev % current;
+                // Percentage mode: prev * (current / 100)
+                result = prev * (current / 100);
                 break;
             default:
                 return;
@@ -81,6 +85,7 @@ class Calculator {
         this.currentOperand = this.roundNumber(result).toString();
         this.operation = null;
         this.previousOperand = '';
+        this.previousValue = null;
         this.updateDisplay();
         this.animateButton('=');
     }
@@ -92,8 +97,20 @@ class Calculator {
     updateDisplay() {
         const currentDisplay = document.getElementById('current');
         const previousDisplay = document.getElementById('previous');
-        
-        if (currentDisplay) currentDisplay.textContent = this.currentOperand;
+
+        if (currentDisplay) {
+            // Prevent display overflow for very long numbers
+            const displayText = this.currentOperand;
+            currentDisplay.textContent = displayText;
+            // Scale down font if number is very long
+            if (displayText.length > 12) {
+                currentDisplay.style.fontSize = '1.5rem';
+            } else if (displayText.length > 9) {
+                currentDisplay.style.fontSize = '2rem';
+            } else {
+                currentDisplay.style.fontSize = '';
+            }
+        }
         if (previousDisplay) previousDisplay.textContent = this.previousOperand;
     }
 
@@ -102,7 +119,7 @@ class Calculator {
         if (currentDisplay) {
             currentDisplay.textContent = 'Error';
             currentDisplay.style.color = '#ef4444';
-            
+
             setTimeout(() => {
                 this.clear();
                 currentDisplay.style.color = 'var(--text-primary)';
@@ -111,9 +128,17 @@ class Calculator {
     }
 
     animateButton(buttonText) {
-        const button = document.querySelector(`button[data-key="${this.getKeyForButton(buttonText)}"]`) ||
-                      document.querySelector(`button:contains("${buttonText}")`);
-        
+        // Use data-key attribute first, then fall back to text content search
+        const key = this.getKeyForButton(buttonText);
+        let button = document.querySelector(`button[data-key="${key}"]`);
+
+        // Fallback: find by text content (valid vanilla JS)
+        if (!button) {
+            button = Array.from(document.querySelectorAll('button')).find(
+                btn => btn.textContent.trim() === buttonText
+            );
+        }
+
         if (button) {
             button.classList.add('btn-pressed');
             setTimeout(() => {

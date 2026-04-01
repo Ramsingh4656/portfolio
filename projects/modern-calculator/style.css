@@ -215,6 +215,9 @@ body::before {
     font-family: var(--font-mono);
     word-wrap: break-word;
     word-break: break-all;
+    overflow: hidden;
+    max-width: 100%;
+    transition: font-size 0.1s ease;
 }
 
 .buttons {

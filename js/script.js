@@ -16,7 +16,6 @@ class PortfolioApp {
         this.initNavigation();
         this.initMobileMenu();
         this.initSmoothScrolling();
-        this.initLazyLoading();
         this.initContactForm();
     }
 
@@ -32,11 +31,12 @@ class PortfolioApp {
     // ===== SCROLL HANDLING =====
     handleScroll() {
         this.updateNavbar();
-        this.revealElements();
+        // IntersectionObserver in initScrollReveal() handles reveal animations efficiently
     }
 
     updateNavbar() {
         const navbar = document.querySelector('.navbar');
+        if (!navbar) return;
         if (window.scrollY > 100) {
             navbar.classList.add('scrolled');
         } else {
@@ -126,10 +126,6 @@ class PortfolioApp {
     // ===== NAVIGATION =====
     initNavigation() {
         this.updateActiveNavLink();
-    }
-
-    handleNavClick(e) {
-        // No longer needed for hash navigation; kept for future use
     }
 
     updateActiveNavLink() {
@@ -222,9 +218,6 @@ class PortfolioApp {
 
     // ===== MOBILE URL CLEANING (removes hashes and .html for mobile navigation) =====
     cleanMobileNavUrls(mobileMenu) {
-        // Only process on mobile viewport
-        if (window.innerWidth > 768) return;
-        
         const links = mobileMenu.querySelectorAll('a');
         links.forEach(link => {
             let href = link.getAttribute('href');
@@ -322,38 +315,11 @@ class PortfolioApp {
         return -c / 2 * (t * (t - 2) - 1) + b;
     }
 
-    // ===== LAZY LOADING =====
-    initLazyLoading() {
-        const images = document.querySelectorAll('img[data-src]');
-        
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            images.forEach(img => imageObserver.observe(img));
-        } else {
-            // Fallback for browsers without IntersectionObserver
-            images.forEach(img => {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-            });
-        }
-    }
-
     // ===== UTILITY FUNCTIONS =====
     handleResize() {
-        // Handle any resize-specific logic
         this.updateActiveNavLink();
         
-        // Re-clean mobile URLs when entering mobile viewport
+        // Re-clean mobile URLs on resize — cleanMobileNavUrls handles width check internally
         const mobileMenu = document.querySelector('.mobile-menu');
         if (mobileMenu) {
             this.cleanMobileNavUrls(mobileMenu);
@@ -369,18 +335,8 @@ class PortfolioApp {
     }
 
     handleKeydown(e) {
-        // Handle keyboard navigation
-        if (e.key === 'Escape') {
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            
-            if (mobileMenu && mobileMenu.classList.contains('active')) {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                mobileMenuBtn.focus();
-            }
-        }
+        // Escape key is handled by the listener inside initMobileMenu()
+        // which has access to the toggleMenu closure for proper state management
     }
 
     // ===== PARTICLE ANIMATION (Optional) =====
@@ -423,22 +379,8 @@ class PortfolioApp {
 
     // ===== CONTACT FORM HANDLING =====
     initContactForm() {
-        const contactForm = document.querySelector('#contact-form');
-        if (!contactForm) return;
-
-        // Form is handled by Google Forms integration in contact page
-        // This is a fallback for any other contact forms
-        contactForm.addEventListener('submit', this.handleContactSubmit.bind(this));
-    }
-
-    handleContactSubmit(e) {
-        // This is handled by the Google Forms integration
-        // Just ensure proper loading states are applied
-        const submitBtn = e.target.querySelector('button[type="submit"]');
-        if (submitBtn) {
-            submitBtn.setAttribute('aria-busy', 'true');
-            submitBtn.disabled = true;
-        }
+        // Contact form submission is fully handled by the inline script in contact/index.html
+        // which integrates with Google Forms. No additional listener needed here.
     }
 
     // ===== NOTIFICATION SYSTEM =====
